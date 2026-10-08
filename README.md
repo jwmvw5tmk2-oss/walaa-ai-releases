@@ -1,2 +1,28 @@
-# walaa-ai-releases
-WALAA AI - Windows installers and update files only, no source code
+# إصدارات WALAA AI لويندوز
+
+هذا المستودع لا يحمل شيفرةً، بل ملفّات إصدارات **WALAA AI** لويندوز فقط.
+
+## للمستخدم
+
+- **لا تحتاج أن تنزّل من هنا بيدك.** البرنامج المثبَّت على جهازك يبحث عن التحديث وحده،
+  ويكفي أن تضغط «تحديث الآن» من الإعدادات.
+- إن أردت التنزيل اليدوي فخذ أحدث إصدار من صفحة **Releases** على يمين هذه الصفحة.
+  في كل إصدار ملفّان تنفيذيّان:
+  - `WALAA-AI-User-Windows-x64-v<الإصدار>.exe` — نسخة المستخدمين.
+  - `WALAA-AI-Windows-x64-v<الإصدار>.exe` — نسخة المطوّر.
+
+## التحقّق من سلامة الملف
+
+مع كل إصدار ملفّا `latest.json` و`latest-user.json`، وفي كلٍّ منهما بصمة SHA-256 للملف
+وحجمه بالبايت. والبرنامج يرفض أي تحديث لا تطابق بصمته، فإن نزّلت بيدك فطابق البصمة:
+
+```powershell
+Get-FileHash .\WALAA-AI-User-Windows-x64-v<الإصدار>.exe -Algorithm SHA256
+```
+
+## ملاحظات
+
+- الإصدارات هنا تُنشر آليًّا، ولا يُستبدل ملفٌّ بعد نشر إصداره.
+- هذا المستودع للتنزيل فقط؛ لا تُقبل فيه طلبات دمج.
+
+Official Windows release files for WALAA AI only (no source code); the installed app verifies each file's SHA-256 before updating.
